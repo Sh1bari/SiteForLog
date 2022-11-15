@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/all.css">
+  <title>Title</title>
+</head>
+<body>
+<div class="center">
+  <h1>Login</h1>
+  <a href="/login/add" >Нет учетной записи?</a>
+</div>
+<div th:each="el : ${posts}">
+  <h3 th:text="${el.login}"></h3>
+  <h3 th:text="${el.password}"></h3>
+  <h3>------------------------------</h3>
+</div>
+</body>
+</html>
