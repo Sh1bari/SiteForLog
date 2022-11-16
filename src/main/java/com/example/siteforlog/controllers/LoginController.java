@@ -26,7 +26,7 @@ public class LoginController {
     }
 
     @GetMapping("/login/add")
-    public String loginAdd(Model model){
+    public String loginAdd(){
         return "loginAdd";
     }
 
@@ -34,7 +34,7 @@ public class LoginController {
     public String loginPostAdd(@RequestParam String login,
                                @RequestParam String password,
                                Model model){
-        Post post = new Post(login, password);
+        Post post = new Post(0, login, password);
         postRepository.save(post);
         return "redirect:/login";
     }

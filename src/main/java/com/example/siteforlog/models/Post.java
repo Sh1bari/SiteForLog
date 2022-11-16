@@ -1,32 +1,21 @@
 package com.example.siteforlog.models;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+
 @Entity
-@Table(name = "post")
+@Setter @Getter @NoArgsConstructor @AllArgsConstructor @ToString
 public class Post {
 
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "login")
     private String login;
-    @Column(name = "password")
+
     private String password;
 
-    public Post() {
-    }
-
-    public Post(String login, String password) {
-        this.login = login;
-        this.password = password;
-    }
 }
