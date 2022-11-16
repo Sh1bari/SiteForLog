@@ -18,6 +18,7 @@ public class LoginController {
         this.postRepository = postRepository;
     }
 
+
     @GetMapping("/login")
     public String login(Model model){
         Iterable<Post> posts = postRepository.findAll();
